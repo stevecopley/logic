@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <title>Logic Circuit Simulator</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h1>Copley Logic Sim</h1>
+
+    <div id="filemenu" class="menu">
+        <input id="filemenutoggle" type="checkbox">
+        <label for="filemenutoggle">☰</label>
+
+        <ul>
+            <li onclick="saveCircuit();">Save</li>
+            <li onclick="openFilePick();">Load</li>
+            <li onclick="clearCircuit();">Clear</li>
+        </ul>
+    </div>
+
+    <div id="filepick">
+        <span class="close" onclick="closeFilePick();">❌</span>
+        <h3>Load circuit</h3>
+        <label for="file">Select File</label>
+        <input type="file" id="file" accept=".json">
+    </div>
+
+    <div id="addmenu" class="menu">
+        <input id="addmenutoggle" type="checkbox">
+        <label for="addmenutoggle">🞣</label>
+
+        <ul>
+            <li onclick="addGate( this );" class="switch" >IN</li>
+            <li onclick="addGate( this );" class="bulb"   >OUT</li>
+            <li onclick="addGate( this );" class="not"    >NOT</li>
+            <li onclick="addGate( this );" class="and"    >AND</li>
+            <li onclick="addGate( this );" class="or"     >OR</li>
+            <li onclick="addGate( this );" class="xor"    >XOR</li>
+            <li onclick="addGate( this );" class="nand"   >NAND</li>
+            <li onclick="addGate( this );" class="nor"    >NOR</li>
+        </ul>
+    </div>
+
+    <script src="js/mouse.js"></script>
+    <script src="js/draggable.js"></script>
+    <script src="js/logic.js"></script>
+</body>
+
+</html>
